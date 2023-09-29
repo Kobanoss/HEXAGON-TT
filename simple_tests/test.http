@@ -1,0 +1,55 @@
+POST http://127.0.0.1:8000/api/v1/send
+Content-Type: application/json
+
+{
+  "receiver": {
+    "ipv4": "127.0.0.1",
+    "port": 50103
+  },
+  "data": {
+    "int_value": 40,
+    "string": "test",
+    "short_value": 2
+  }
+}
+
+###
+
+POST http://127.0.0.1:8090/api/v1/send
+Content-Type: application/json
+
+{
+  "receiver": {
+    "ipv4": "127.0.0.1",
+    "port": 50102
+  },
+  "data": {
+    "int_value": 50,
+    "string": "test2",
+    "short_value": 3
+  }
+}
+
+###
+
+GET http://127.0.0.1:8000/api/v1/stat/received
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/stat/sent
+Accept: application/json
+
+
+###
+
+###
+
+GET http://127.0.0.1:8090/api/v1/stat/received
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8090/api/v1/stat/sent
+Accept: application/json
+
